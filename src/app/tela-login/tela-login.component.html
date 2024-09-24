@@ -1,0 +1,12 @@
+<div id="main">
+    <h1 id="cal-titulo">Calculadora de Obesidade Mórbida</h1>
+    <label for="peso">Peso (kg):</label>
+    <input type="number" [(ngModel)]="peso" name="peso" id="peso" placeholder="Digite seu peso">
+    
+    <label for="altura">Altura (m):</label>
+    <input type="number" [(ngModel)]="altura" name="altura" id="altura" placeholder="Digite sua altura">
+    
+    <button type="submit" (click)="calcularIMC()" >Enviar</button>
+    
+    <div id="mensagem" *ngIf="calcularIMC" >{{resultado}}</div>
+    </div>
